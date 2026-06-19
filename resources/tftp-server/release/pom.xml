@@ -26,7 +26,7 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>
+									<target>
 										<echo>TFTP Server release</echo>
 										<copy overwrite="true" todir="${release.dir}/resources/tftp-server">
 											<fileset dir="${basedir}/../du/target">
@@ -43,7 +43,7 @@
 												<filter token="JBOSS.PATH" value="${jboss.path}" />
 											</filterset>
 										</copy>
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 						</executions>
