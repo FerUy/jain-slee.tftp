@@ -51,8 +51,8 @@ pipeline {
         stage('Push to Repo') {
             when{anyOf {branch 'master'; branch 'release'}}
 			steps {
-                sh "mkdir -p /var/www/html/NAIKERI/jain-slee.tftp/${TFTP_BUILD_VERSION}/"
-                sh "cp -r ${TFTP_BUILD_VERSION}/ /var/www/html/NAIKERI/jain-slee.tftp/${TFTP_BUILD_VERSION}/"
+                sh "mkdir -p /var/www/html/NAIKERI/jain-slee.tftp/"
+                sh "cp -r ${TFTP_BUILD_VERSION} /var/www/html/NAIKERI/jain-slee.tftp/"
 				sh "rm -rf ${TFTP_BUILD_VERSION}"
 			}
 		}
